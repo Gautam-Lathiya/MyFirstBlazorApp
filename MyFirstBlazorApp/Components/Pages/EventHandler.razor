@@ -1,0 +1,21 @@
+﻿
+@page "/gautam"
+@rendermode InteractiveServer
+<h3>EventHandler</h3>
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">@name</p>
+
+<button class="btn btn-primary" @onclick="ChangeText">Click me</button>
+
+@code {
+    private string name = "hello";
+
+    private void ChangeText()
+    {
+        name = "hello world";
+    }
+}

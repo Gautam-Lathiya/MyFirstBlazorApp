@@ -1,0 +1,27 @@
+﻿@page "/singletondi"
+@inject Service obj1
+@inject Service obj2
+
+<h3>SingletonDI</h3>
+
+<button @onclick="Addstr">Add String to obj1</button>
+
+@if(obj1.list.Count == 0)
+{
+    <b>No Strings are found.</b>
+}
+else
+{
+    @foreach (var str in obj1.list)
+    {
+        <p>@str</p>
+    }
+}
+
+@code {
+    public void Addstr()
+    {
+        obj1.list.Add("Hello");
+        obj1.list.Add("World");
+    }
+}

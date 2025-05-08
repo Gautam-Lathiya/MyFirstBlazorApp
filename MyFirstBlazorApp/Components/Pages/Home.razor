@@ -1,0 +1,16 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+@foreach(var str in list)
+{
+    <p>@((MarkupString)str)</p>
+}
+
+@code{
+        List<string> list = new List<string>(){ "<p>hello</p>", "<b>world</b>", "<i>gautam</i>", "<u><b><i>kumar</i></b></u>" };
+}
