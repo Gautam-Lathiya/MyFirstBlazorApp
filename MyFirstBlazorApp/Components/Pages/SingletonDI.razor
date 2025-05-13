@@ -1,4 +1,5 @@
 ﻿@page "/singletondi"
+@rendermode InteractiveServer
 @inject Service obj1
 @inject Service obj2
 
@@ -6,13 +7,13 @@
 
 <button @onclick="Addstr">Add String to obj1</button>
 
-@if(obj1.list.Count == 0)
+@if(obj2.list.Count == 0)
 {
     <b>No Strings are found.</b>
 }
 else
 {
-    @foreach (var str in obj1.list)
+    @foreach (var str in obj2.list)
     {
         <p>@str</p>
     }
